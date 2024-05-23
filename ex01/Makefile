@@ -6,13 +6,13 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/23 17:10:55 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/23 17:11:04 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME        = Zombie
 
-SRC         = randomChump.cpp main.cpp Zombie.cpp newZombie.cpp
+SRC         = zombieHorde.cpp main.cpp Zombie.cpp
 
 SRCDIR      = ./src/
 
