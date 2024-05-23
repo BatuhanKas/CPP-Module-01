@@ -6,23 +6,23 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/23 14:06:54 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/23 14:24:52 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME        = Zombie
 
-SRC         = ./src/randomChump.cpp ./src/main.cpp ./src/Zombie.cpp ./src/newZombie.cpp
+SRC         = randomChump.cpp main.cpp Zombie.cpp newZombie.cpp
 
-SRCDIR      = ./
+SRCDIR      = ./src/
 
-OBJDIR      = ./obj
+OBJDIR      = ./src/obj
 
 OBJ         = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(BASE)))
 
 BASE        = $(basename $(notdir $(SRC)))
 
-CC          = g++ -Wall -Wextra -Werror -std=c++98
+CC          = c++ -Wall -Wextra -Werror -std=c++98
 
 CFLAGS      = -g
 
