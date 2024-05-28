@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   stream.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 12:44:44 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/28 15:30:32 by bkas             ###   ########.fr       */
+/*   Created: 2024/05/28 16:46:55 by bkas              #+#    #+#             */
+/*   Updated: 2024/05/28 17:26:21 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/HumanB.hpp"
+#ifndef STREAM_HPP
+#define STREAM_HPP
 
-HumanB::HumanB(string name) {
-    this->name = name;
-    this->weapon = nullptr;
-}
+#include <fstream>
+#include <iostream>
 
-HumanB::HumanB(string name, Weapon* weapon) : name(name), weapon(weapon){};
+#define string std::string
+#define cout std::cout
+#define cin std::cin
+#define endl std::endl
+#define ifstream std::ifstream
+#define ofstream std::ofstream
+#define getline std::getline
+#define cerr std::cerr
 
-void HumanB::setWeapon(Weapon& weapon) { this->weapon = &weapon; }
+void replaceProcess(string& filename, string& s1, string& s2);
 
-void HumanB::attack() {
-    cout << name << " attacks with their " << weapon->getType() << endl;
-}
+#endif
