@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 18:07:40 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/28 15:18:14 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/28 15:28:19 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class HumanB {
 
    public:
     HumanB(string name);
+    HumanB(string name, Weapon *weapon);
     void setWeapon(Weapon &weapon);
     void attack();
 };

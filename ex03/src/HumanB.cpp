@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 12:44:44 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/28 15:17:04 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/28 15:30:14 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ HumanB::HumanB(string name) {
     this->name = name;
     this->weapon = nullptr;
 }
+
+HumanB::HumanB(string name, Weapon* weapon) : name(name), weapon(weapon){};
 
 void HumanB::setWeapon(Weapon& weapon) { this->weapon = &weapon; }
 
