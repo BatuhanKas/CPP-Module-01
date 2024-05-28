@@ -9,8 +9,12 @@ int main() {
 
     // Find first occurrence of "geeks"
     size_t found = str.find(str1);
-    if (found != string::npos) {
-        cout << "First occurrence is " << found << endl;
-        cout << "NPOS is " << string::npos << endl;
+    string str2 = &str[found];
+    cout << str2 << endl;
+
+    while ((pos = line.find(word, pos)) != std::string::npos) {
+        ++count;
+        // Aramaya kaldığı yerden devam et
+        pos += word.length();
     }
 }
