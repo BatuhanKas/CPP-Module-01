@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:57:30 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/28 22:32:27 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/28 22:57:24 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,16 @@
 
 void replaceProcess(string& filename, string& s1, string& s2) {
     ifstream inputfile(filename.c_str());
+    if (!inputfile) {
+        cerr << "input file error!" << endl;
+        return;
+    }
     filename += ".replace";
     ofstream outputfile(filename.c_str());
+    if (!outputfile) {
+        cerr << "output file error!" << endl;
+        return;
+    }
 
     string line;
     size_t pos = 0, count = 0, tmp = 0;
@@ -36,20 +44,19 @@ void replaceProcess(string& filename, string& s1, string& s2) {
         }
         pos = 0;
         tmp = 0;
-        if (count) {
+        if (count)
             while (count) {
                 outputfile << s2;
                 count--;
             }
-        } else {
+        else
             outputfile << line;
-        }
         outputfile << endl;
     }
 
-    cout << "melih size: " << count << endl;
+    // cout << "melih size: " << count << endl;
 
-    line == s1 ? outputfile << s2 << endl : outputfile << line << endl;
+    // line == s1 ? outputfile << s2 << endl : outputfile << line << endl;
 
     // batubatubatubatu
     // melihmelihmelihmelih
