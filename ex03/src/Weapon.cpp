@@ -6,11 +6,13 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 17:50:41 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 17:58:10 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/28 14:32:32 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "../inc/Weapon.hpp"
+
+Weapon::Weapon(string type) { setType(type); }
 
 string Weapon::getType() const { return type; }
 

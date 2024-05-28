@@ -6,12 +6,14 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 18:09:22 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 18:14:36 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/28 14:55:10 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "../inc/HumanA.hpp"
 
-void HumanA::setWeapon(string name) { setType(name); }
+HumanA::HumanA(string hname, Weapon& weapon) : weapon(weapon) { name = hname; }
 
-void HumanA::setName(string name) { this->name = name; }
+void HumanA::attack() {
+    cout << name << " attacks with their " << weapon.getType() << endl;
+}

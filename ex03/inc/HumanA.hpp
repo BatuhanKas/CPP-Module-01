@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 17:56:33 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 18:14:43 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/28 13:39:26 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 
 #include "Weapon.hpp"
 
-class HumanA : private Weapon {
+class HumanA {
    private:
     string name;
+    Weapon& weapon;
 
    public:
-    void setWeapon(string name);
-    void setName(string name);
+    HumanA(string hname, Weapon& weapon);
+    void attack();
 };
 
 #endif
