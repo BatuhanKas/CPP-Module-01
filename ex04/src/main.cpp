@@ -6,11 +6,11 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:56:46 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/29 18:05:13 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/29 18:10:21 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Stream.hpp"
+#include "../inc/Stream.hpp"
 
 int main(int ac, char **av) {
     if (ac == 4) {

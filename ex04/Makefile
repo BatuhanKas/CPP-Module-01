@@ -6,7 +6,7 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/28 17:24:49 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/29 18:09:21 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ PROJECTNAME = Stream
 
 SRC         = main.cpp Stream.cpp
 
-SRCDIR      = ./
+SRCDIR      = ./src/
 
-OBJDIR      = ./obj
+OBJDIR      = ./src/obj
 
 OBJ         = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(BASE)))
 

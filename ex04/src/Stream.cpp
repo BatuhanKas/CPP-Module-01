@@ -6,11 +6,11 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:57:30 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/29 18:04:12 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/29 18:09:07 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Stream.hpp"
+#include "../inc/Stream.hpp"
 
 void replaceProcess(string& filename, string& s1, string& s2) {
     ifstream inputfile(filename.c_str());
