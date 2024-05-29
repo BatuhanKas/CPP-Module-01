@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:57:30 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/28 22:57:24 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/29 17:24:15 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void replaceProcess(string& filename, string& s1, string& s2) {
         cerr << "input file error!" << endl;
         return;
     }
+
     filename += ".replace";
     ofstream outputfile(filename.c_str());
     if (!outputfile) {
@@ -26,40 +27,24 @@ void replaceProcess(string& filename, string& s1, string& s2) {
     }
 
     string line;
-    size_t pos = 0, count = 0, tmp = 0;
     while (getline(inputfile, line)) {
-        cout << "line: " << line << endl;
-        cout << s1 << endl;
-        // tmp = line.find(s1, pos);
-        // cout << "1" << endl;
-        cout << "pos: " << pos << endl;
-
+        size_t pos = 0, tmp = 0;
+        bool found = false;
         while ((tmp = line.find(s1, pos)) != string::npos) {
-            count++;
-            cout << "tmp:" << tmp << endl;
-            cout << "2" << endl;
-            // Aramaya kaldığı yerden devam et
-            pos += s1.length();
-            // pos = line.find(s1, pos);
-        }
-        pos = 0;
-        tmp = 0;
-        if (count)
-            while (count) {
-                outputfile << s2;
-                count--;
+            found = true;
+            if (pos != tmp) {
+                outputfile << line.substr(pos, tmp - pos);
             }
-        else
+            outputfile << s2;
+            pos = tmp + s1.length();
+        }
+        if (!found) {
             outputfile << line;
+        } else {
+            outputfile << line.substr(pos);
+        }
         outputfile << endl;
     }
-
-    // cout << "melih size: " << count << endl;
-
-    // line == s1 ? outputfile << s2 << endl : outputfile << line << endl;
-
-    // batubatubatubatu
-    // melihmelihmelihmelih
 
     inputfile.close();
     outputfile.close();
