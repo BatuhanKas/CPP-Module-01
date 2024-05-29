@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:57:30 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/29 17:32:18 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/29 17:52:35 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void replaceProcess(string& filename, string& s1, string& s2) {
         }
         outputfile << endl;
     }
-
     inputfile.close();
     outputfile.close();
 }
