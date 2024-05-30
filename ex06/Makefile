@@ -6,7 +6,7 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/30 14:02:48 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/30 18:18:59 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,18 @@ SRC         = main.cpp Harl.cpp
 SRCDIR      = ./src/
 
 OBJDIR      = ./src/obj
+
+WHITE		= \033[1;37m
+
+GREEN		= \033[0;32m
+
+RED			= \033[0;7;31m
+
+BLUE		= \033[0;34m
+
+MAGENTA		= \033[0;35m
+
+RESET		= \033[0m
 
 OBJ         = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(BASE)))
 
@@ -36,23 +48,23 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@$(ECHO) "\033[0;32m> $(PROJECTNAME) Project Compiled\033[0m"
+	@$(ECHO) "$(GREEN)> $(PROJECTNAME) Project Compiled $(RESET)"
 
 $(OBJDIR):
 	@test -d $(OBJDIR) || mkdir $(OBJDIR)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 	@$(CC) $(CFLAGS) -c -o $@ $< \
-	&& $(ECHO) "\033[1;37m[C++] : Compiled $(notdir $<) [\033[0;32mOK\033[1;30m]\033[0m" \
-	|| $(ECHO) "\033[1;37m[C++] : Compiled $(notdir $<) [\033[0;7;31mError\033[0;1;30m]\033[0m"
+	&& $(ECHO) "$(WHITE)[C++] : Compiled $(notdir $<) [$(GREEN)OK$(RESET)]$(RESET)" \
+	|| $(ECHO) "$(WHITE)[C++] : Compiled $(notdir $<) [$(RED)Error$(RESET)]$(RESET)"
 
 clean:
 	@$(RM) -r $(OBJDIR)
-	@$(ECHO) "\033[0;34m> $(PROJECTNAME) Directory cleaned\033[0m"
+	@$(ECHO) "$(BLUE)> $(PROJECTNAME) Directory cleaned$(RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(ECHO) "\033[0;35m> $(PROJECTNAME) Binaries removed\033[0m"
+	@$(ECHO) "$(MAGENTA)> $(PROJECTNAME) Binaries removed$(RESET)"
 
 re: fclean all
 
