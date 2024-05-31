@@ -6,7 +6,7 @@
 #    By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 16:55:08 by bkas              #+#    #+#              #
-#    Updated: 2024/05/23 17:43:02 by bkas             ###   ########.fr        #
+#    Updated: 2024/05/31 12:27:39 by bkas             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@$(ECHO) "\033[0;32m> Zombie Project Compiled\033[0m"
+	@$(ECHO) "\033[0;32m> Brain Project Compiled\033[0m"
 
 $(OBJDIR):
 	@test -d $(OBJDIR) || mkdir $(OBJDIR)
@@ -46,11 +46,11 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 
 clean:
 	@$(RM) -r $(OBJDIR)
-	@$(ECHO) "\033[0;34m> Zombie Directory cleaned\033[0m"
+	@$(ECHO) "\033[0;34m> Brain Directory cleaned\033[0m"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(ECHO) "\033[0;35m> Zombie Binaries removed\033[0m"
+	@$(ECHO) "\033[0;35m> Brain Binaries removed\033[0m"
 
 re: fclean all
 
