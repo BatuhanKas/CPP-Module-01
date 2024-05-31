@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 10:41:26 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/31 10:36:25 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/31 14:34:25 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void Harl::complain(string level) {
         if (!level.compare(actions[i])) break;
 
     switch (i) {
-        case 0:
+        case 0: 
             Harl::debug();
         case 1:
             Harl::info();

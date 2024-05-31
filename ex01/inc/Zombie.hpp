@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:51:55 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 17:11:58 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/31 16:55:21 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class Zombie {
     void announce(void);
 };
 
-Zombie *newZombie(string name);
 Zombie *zombieHorde(int N, string name);
 
 #endif

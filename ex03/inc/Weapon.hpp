@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 17:48:30 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/31 11:48:51 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/31 13:54:29 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Weapon {
 
    public:
     Weapon(string type);
-    string getType() const;
+    const string& getType() const;
     void setType(string set);
 };
 
