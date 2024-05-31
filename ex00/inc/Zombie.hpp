@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:51:55 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 14:03:35 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/31 10:37:59 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 class Zombie {
    private:
-    string zName;
+    string name;
 
    public:
     Zombie();

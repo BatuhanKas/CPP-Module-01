@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 14:04:19 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/23 16:06:53 by bkas             ###   ########.fr       */
+/*   Updated: 2024/05/31 10:38:57 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 Zombie::Zombie() {}
 
-Zombie::~Zombie() { cout << zName << " is Destroyed." << endl; }
+Zombie::~Zombie() { cout << this->name << " is Destroyed." << endl; }
 
-void Zombie::setName(string name) { zName = name; }
+void Zombie::setName(string name) { this->name = name; }
 
 void Zombie::announce(void) {
-    cout << zName << ": BraiiiiiiinnnzzzZ..." << endl;
+    cout << name << ": BraiiiiiiinnnzzzZ..." << endl;
 }
