@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:51:55 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/31 16:56:21 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/03 11:06:19 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #define cerr std::cerr
 #define endl std::endl
 #define string std::string
-#define exception std::exception
+#define bad_alloc std::bad_alloc
 
 class Zombie {
    private:

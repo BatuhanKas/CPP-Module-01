@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 10:41:26 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/31 14:43:15 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/03 11:02:24 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,25 @@ void Harl::complain(string level) {
     void (Harl::*ptr[])() = {&Harl::debug, &Harl::info, &Harl::warning,
                              &Harl::error};
 
-    for (size_t i = 0; i < sizeof(actions) / sizeof(actions[0]); i++) {
-        if (actions[i].compare(level)) {
-            (this->*ptr[i])();
-            return;
-        }
+    size_t i = 0;
+    while (i < (sizeof(actions) / sizeof(actions[0])) &&
+           actions[i].compare(level))
+        i++;
+
+    switch (i) {
+        case 0:
+            (this->*ptr[0])();
+            break;
+        case 1:
+            (this->*ptr[1])();
+            break;
+        case 2:
+            (this->*ptr[2])();
+            break;
+        case 3:
+            (this->*ptr[3])();
+            break;
+        default:
+            break;
     }
 }

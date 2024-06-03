@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 10:41:26 by bkas              #+#    #+#             */
-/*   Updated: 2024/05/31 14:34:25 by bkas             ###   ########.fr       */
+/*   Updated: 2024/06/03 11:05:08 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,13 @@ void Harl::defaultf(void) {
 void Harl::complain(string level) {
     string actions[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-    size_t i;
-    for (i = 0; i < sizeof(actions) / sizeof(actions[0]); i++)
-        if (!level.compare(actions[i])) break;
+    size_t i = 0;
+    while (i < sizeof(actions) / sizeof(actions[0]) &&
+           level.compare(actions[i]))
+        i++;
 
     switch (i) {
-        case 0: 
+        case 0:
             Harl::debug();
         case 1:
             Harl::info();
